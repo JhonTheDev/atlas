@@ -1,0 +1,61 @@
+{
+  "name": "PomodoroSession",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "ID da tarefa relacionada"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Dura\u00e7\u00e3o em minutos"
+    },
+    "break_duration": {
+      "type": "number",
+      "description": "Dura\u00e7\u00e3o do intervalo em minutos"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se foi completado"
+    },
+    "productivity_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Score de produtividade (0-100)"
+    },
+    "interruptions": {
+      "type": "number",
+      "default": 0,
+      "description": "N\u00famero de interrup\u00e7\u00f5es"
+    },
+    "focus_quality": {
+      "type": "string",
+      "enum": [
+        "poor",
+        "fair",
+        "good",
+        "excellent"
+      ],
+      "description": "Qualidade do foco durante a sess\u00e3o"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas sobre a sess\u00e3o"
+    },
+    "start_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Hora de in\u00edcio"
+    },
+    "end_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Hora de t\u00e9rmino"
+    }
+  },
+  "required": [
+    "duration_minutes"
+  ]
+}

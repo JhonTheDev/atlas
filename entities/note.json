@@ -1,0 +1,54 @@
+{
+  "name": "Note",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo da nota"
+    },
+    "content": {
+      "type": "string",
+      "description": "Conte\u00fado da nota"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "insight",
+        "learning",
+        "reflection",
+        "idea",
+        "research",
+        "other"
+      ],
+      "description": "Categoria da nota"
+    },
+    "project_id": {
+      "type": "string",
+      "description": "ID do projeto relacionado"
+    },
+    "task_id": {
+      "type": "string",
+      "description": "ID da tarefa relacionada"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags para busca"
+    },
+    "importance": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default": "medium"
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}

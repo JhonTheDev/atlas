@@ -1,0 +1,76 @@
+{
+  "name": "Task",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo da tarefa"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o detalhada"
+    },
+    "project_id": {
+      "type": "string",
+      "description": "ID do projeto relacionado"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora de vencimento"
+    },
+    "scheduled_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data agendada para execu\u00e7\u00e3o"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "todo",
+        "in_progress",
+        "completed",
+        "blocked"
+      ],
+      "default": "todo"
+    },
+    "estimated_pomodoros": {
+      "type": "number",
+      "description": "N\u00famero estimado de ciclos Pomodoro"
+    },
+    "completed_pomodoros": {
+      "type": "number",
+      "default": 0,
+      "description": "Ciclos Pomodoro completados"
+    },
+    "energy_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "N\u00edvel de energia necess\u00e1rio"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags para organiza\u00e7\u00e3o"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

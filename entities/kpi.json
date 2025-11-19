@@ -1,0 +1,58 @@
+{
+  "name": "KPI",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data da m\u00e9trica"
+    },
+    "pomodoros_completed": {
+      "type": "number",
+      "default": 0,
+      "description": "Pomodoros completados no dia"
+    },
+    "tasks_completed": {
+      "type": "number",
+      "default": 0,
+      "description": "Tarefas completadas"
+    },
+    "focus_time_minutes": {
+      "type": "number",
+      "default": 0,
+      "description": "Minutos em foco profundo"
+    },
+    "productivity_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Score geral de produtividade"
+    },
+    "energy_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "N\u00edvel de energia do dia"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "poor",
+        "fair",
+        "good",
+        "excellent"
+      ],
+      "description": "Humor/disposi\u00e7\u00e3o do dia"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es do dia"
+    }
+  },
+  "required": [
+    "date"
+  ]
+}

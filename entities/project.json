@@ -1,0 +1,60 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do projeto"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o do projeto"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date",
+      "description": "Prazo final"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium",
+      "description": "Prioridade do projeto"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planning",
+        "active",
+        "paused",
+        "completed",
+        "archived"
+      ],
+      "default": "planning",
+      "description": "Status atual do projeto"
+    },
+    "progress": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 0,
+      "description": "Porcentagem de conclus\u00e3o"
+    },
+    "color": {
+      "type": "string",
+      "description": "Cor do projeto para identifica\u00e7\u00e3o visual"
+    },
+    "estimated_hours": {
+      "type": "number",
+      "description": "Horas estimadas para conclus\u00e3o"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
